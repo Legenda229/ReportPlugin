@@ -1,0 +1,27 @@
+name: ReportPlugin
+version: 1.0
+main: org.example.reportplugin.ReportPlugin
+api-version: 1.16
+commands:
+  report:
+    description: Отправить жалобу на игрока
+    usage: /<command> <ник> <причина>
+    permission: reportplugin.report
+  reports:
+    description: Посмотреть репорты на себя
+    usage: /<command>
+    permission: reportplugin.reports
+  reportscheck:
+    description: Посмотреть все репорты (для администраторов)
+    usage: /<command>
+    permission: reportplugin.reportscheck
+permissions:
+  reportplugin.report:
+    description: Позволяет использовать команду /report
+    default: true
+  reportplugin.reports:
+    description: Позволяет использовать команду /reports
+    default: true
+  reportplugin.reportscheck:
+    description: Позволяет использовать команду /reportscheck
+    default: op
